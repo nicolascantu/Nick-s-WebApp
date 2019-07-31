@@ -1,0 +1,43 @@
+body {
+background-image: url(Galaxy.jpg);
+font-size: 20px;
+}
+h1 {
+    color: white;
+    text-align-last: center;
+}
+h2 {
+    color: white;
+    text-align-last: left;
+    
+}
+h3 {
+    color: white;
+    text-align-last: center;
+    
+}
+h4 {
+    color: white;
+    text-align-last: right;
+    
+}
+
+.list-view {
+    display: flex inline-block;
+    columns: 3;
+    width: 100%;
+  }
+
+  .card{
+      height: 600px;
+      margin-bottom: 100px;
+  }
+
+img{
+    height: 300px;
+    width: 100%
+}   
+
+.detail-view{
+    height: 600px;
+}
