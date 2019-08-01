@@ -45,7 +45,18 @@ var getOneRecord = function(id) {
       var fan = record.fields['Fan'];
       var cooler = record.fields['Cooler'];
       var ssd = record.fields['SSD'];
-      html.push(detailView(picture, name, price, ram,  power, graphics, cpu, drive, pc, motherboard, windows, fan, cooler, ssd));
+      var fanlinks = record.fields['FanLinks'];
+      var ssdlinks = record.fields['SSDLinks'];
+      var windowslinks = record.fields['WindowsLinks'];
+      var motherboardlinks = record.fields['MotherboardLinks'];
+      var caselinks = record.fields['CaseLinks'];
+      var drivelinks = record.fields['DriveLinks'];
+      var cpulinks = record.fields['CPULinks'];
+      var graphicslinks = record.fields['GraphicsLinks'];
+      var powerlinks = record.fields['PowerLinks'];
+      var coolerlinks = record.fields['CoolerLinks'];
+      var ramlinks = record.fields['RAMLinks'];
+      html.push(detailView(picture, name, price, ram,  power, graphics, cpu, drive, pc, motherboard, windows, fan, cooler, ssd, fanlinks, ssdlinks, windowslinks, motherboardlinks, caselinks, drivelinks, cpulinks, graphicslinks, powerlinks, coolerlinks, ramlinks));
       $('.detail-view').append(html);
     }
   );
@@ -67,23 +78,23 @@ var listView = function(id, name, picture, description, price) {
 `;
 }
 
-var detailView = function(picture, name, price, ram,  power, graphics, cpu, drive, pc, motherboard, windows, fan, cooler, ssd) {
+var detailView = function(picture, name, price, ram, power, graphics, cpu, drive, pc, motherboard, windows, fan, cooler, ssd, fanlinks, ssdlinks, windowslinks, motherboardlinks, caselinks, drivelinks, cpulinks, graphicslinks, powerlinks, coolerlinks, ramlinks) {
   return `
   ${picture ? `<img src="${picture[0].url}">` : ``}
   <h2>${name}</h2>
-  <h3>${price}</h3>
+  <h3>$${price}</h3>
 <ul class="list-group">
-  <li class="list-group-item">${ram}</li>
-  <li class="list-group-item">${power}</li>
-  <li class="list-group-item">${graphics}</li>
-  <li class="list-group-item">${cpu}</li>
-  <li class="list-group-item">${drive}</li>
-  <li class="list-group-item">${pc}</li>
-  <li class="list-group-item">${motherboard}</li>
-  <li class="list-group-item">${windows}</li>
-  <li class="list-group-item">${fan}</li>
-  <li class="list-group-item">${cooler}</li>
-  <li class="list-group-item">${ssd}</li>
+  <li class="list-group-item"> <strong> System Memory: </strong> &nbsp &nbsp ${ram} &nbsp &nbsp <a href="${ramlinks}" target="_blank">Link to purchase</a> </li> 
+  <li class="list-group-item"> <strong> Power Supply: </strong> &nbsp &nbsp ${power} &nbsp &nbsp <a href="${powerlinks}" target="_blank">Link to purchase</a> </li>
+  <li class="list-group-item"> <strong> Graphics Card: </strong> &nbsp &nbsp ${graphics} &nbsp &nbsp <a href="${graphicslinks}" target="_blank">Link to purchase</a> </li>
+  <li class="list-group-item"> <strong> Central Processing Unit: </strong> &nbsp &nbsp ${cpu} &nbsp &nbsp <a href="${cpulinks}" target="_blank">Link to purchase</a> </li>
+  <li class="list-group-item"> <strong> Hardrive/Storage: </strong> &nbsp &nbsp ${drive} &nbsp &nbsp <a href="${drivelinks}" target="_blank">Link to purchase</a> </li>
+  <li class="list-group-item"> <strong> PC Case: </strong> &nbsp &nbsp ${pc} &nbsp &nbsp <a href="${caselinks}" target="_blank">Link to purchase</a> </li>
+  <li class="list-group-item"> <strong> Motherboard: </strong> &nbsp &nbsp ${motherboard} &nbsp &nbsp <a href="${motherboardlinks}" target="_blank">Link to purchase</a> </li>
+  <li class="list-group-item"> <strong> Windows 10 Operating System: </strong> &nbsp &nbsp ${windows} &nbsp &nbsp <a href="${windowslinks}" target="_blank">Link to purchase</a> </li>
+  <li class="list-group-item"> <strong> Fans: </strong> &nbsp &nbsp ${fan} &nbsp &nbsp <a href="${fanlinks}" target="_blank">Link to purchase</a> </li> 
+  <li class="list-group-item"> <strong> Cooling System: </strong> &nbsp &nbsp ${cooler} &nbsp &nbsp <a href="${coolerlinks}" target="_blank">Link to purchase</a> </li>
+  <li class="list-group-item"> <strong> Solid State Drive: </strong> &nbsp &nbsp ${ssd} &nbsp &nbsp <a href="${ssdlinks}" target="_blank">Link to purchase</a></li>
 </ul>
 `;
 }

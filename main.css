@@ -40,4 +40,14 @@ img{
 
 .detail-view{
     height: 600px;
+    text-align: center;
+    word-spacing: normal;
+}
+.display-4{
+    color: blue;
+}
+
+.container1{
+    margin-top: 100px;
+    margin-left: 100px;
 }
