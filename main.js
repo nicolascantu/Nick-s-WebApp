@@ -80,7 +80,9 @@ var listView = function(id, name, picture, description, price) {
 
 var detailView = function(picture, name, price, ram, power, graphics, cpu, drive, pc, motherboard, windows, fan, cooler, ssd, fanlinks, ssdlinks, windowslinks, motherboardlinks, caselinks, drivelinks, cpulinks, graphicslinks, powerlinks, coolerlinks, ramlinks) {
   return `
+  <div class="Image">
   ${picture ? `<img src="${picture[0].url}">` : ``}
+  </div>
   <h2>${name}</h2>
   <h3>$${price}</h3>
 <ul class="list-group">

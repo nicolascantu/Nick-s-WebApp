@@ -1,6 +1,8 @@
 body {
-background-image: url(Galaxy.jpg);
+background-image: url(Website\ Background.jpg);
 font-size: 20px;
+background-repeat: no-repeat;
+width: 1170px;
 }
 h1 {
     color: white;
@@ -35,7 +37,7 @@ h4 {
 
 img{
     height: 300px;
-    width: 100%
+    width: 100%;
 }   
 
 .detail-view{
@@ -50,4 +52,23 @@ img{
 .container1{
     margin-top: 100px;
     margin-left: 100px;
+}
+
+.card:hover { 
+    background-color: royalblue;
+  }
+  .card:hover { 
+    color: white;
+  }
+
+  .card-body a:hover { 
+    color: white;
+  }
+.top{
+    width: 1300px;
+    background-color: lightgray;
+}
+
+.Image img {
+    width: 350px;
 }
