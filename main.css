@@ -1,8 +1,7 @@
 body {
 background-image: url(Website\ Background.jpg);
 font-size: 20px;
-background-repeat: no-repeat;
-width: 1170px;
+background-size: cover;
 }
 h1 {
     color: white;
@@ -45,8 +44,8 @@ img{
     text-align: center;
     word-spacing: normal;
 }
-.display-4{
-    color: blue;
+.container{
+    color: black;
 }
 
 .container1{
@@ -55,20 +54,31 @@ img{
 }
 
 .card:hover { 
-    background-color: royalblue;
+    background-color: black;
   }
   .card:hover { 
     color: white;
   }
-
   .card-body a:hover { 
-    color: white;
+    color: black;
   }
 .top{
-    width: 1300px;
+    width: 100%;
     background-color: lightgray;
 }
 
 .Image img {
     width: 350px;
 }
+
+.jumbotron{
+    background-image: url("https://picserio.com/data/out/348/pc-master-race-wallpaper_5556092.jpg");
+    background-size: contain;
+    width: inherit;
+}
+
+.card-title a{  
+    text-decoration: none;
+    color: black;
+}
+

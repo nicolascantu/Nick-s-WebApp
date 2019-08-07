@@ -67,7 +67,7 @@ var listView = function(id, name, picture, description, price) {
   return `
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-     <h2 class="card-title"><a href="index.html?id=${id}">${name}</a> </h2>
+     <h2 class="card-title"><a href="index.html?id=${id}" style="background-color: white;" >${name}</a> </h2>
     <p class="card-text">${description}</p>
   </div>
   <ul class="list-group list-group-flush">
